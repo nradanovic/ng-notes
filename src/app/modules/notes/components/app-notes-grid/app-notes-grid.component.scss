@@ -1,0 +1,39 @@
+:host {
+  padding: 89px 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.note-card {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 200px;
+  margin: 31px 30px;
+
+  border-radius: 10px;
+  display: grid;
+  background: #fdfdfd;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+  border: 3px solid transparent;
+  padding: 20px 22px 17px 16px;
+  overflow: hidden;
+  &:hover {
+    cursor: pointer;
+    border: 3px solid #b90445;
+  }
+  &.new-note {
+    background: #b90445;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 75px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    justify-content: center;
+  }
+}
+::ng-deep ul {
+  padding: 0 15px;
+}

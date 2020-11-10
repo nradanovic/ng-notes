@@ -1,0 +1,8 @@
+<app-app-notes-grid></app-app-notes-grid>
+<ng-container *ngIf="appStateService.getState() | async as state; let i = index">
+  <app-app-note-preview *ngIf="state.displayState === appStates.NOTE_PREVIEW" [noteId]="state.noteId">
+  </app-app-note-preview>
+  <app-app-note-edit *ngIf="state.displayState === appStates.NOTE_EDIT || state.displayState === appStates.NOTE_CREATE"
+    [noteId]="state.noteId">
+  </app-app-note-edit>
+</ng-container>

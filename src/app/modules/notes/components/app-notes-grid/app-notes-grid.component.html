@@ -1,0 +1,5 @@
+<div class="note-card new-note" (click)="createNewNote()">+</div>
+<div class="note-card" *ngFor="let note of notesService.getNotes() | async | keyvalue, let i = index" (click)="previewNote(note.key)">
+  <markdown ngPreserveWhitespaces>{{note.value}}</markdown>
+</div>
+
